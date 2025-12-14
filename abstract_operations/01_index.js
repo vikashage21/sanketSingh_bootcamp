@@ -138,7 +138,114 @@ console.log(18 + newObj)
 
 //=================ToBoolean==================
 
-let x = 10 ;
+let x = 10;
 console.log(!10)
 
 //  - return false
+
+
+console.log(NaN == NaN)
+// false
+
+console.log(NaN === NaN)
+
+// false
+console.log('NaN' == NaN)
+
+// false
+
+let t = {
+    x: 10,
+    valueOf() {
+        return 100
+    }
+}
+
+console.log(99 == t)
+
+// false
+
+console.log(100 == t)
+
+// true
+
+
+
+let z = {
+    x: 10,
+}
+
+let m = {
+    x: 10
+}
+
+let n = {
+    x: 10
+}
+
+
+console.log(z == m)
+
+// false
+
+console.log(m == n)
+
+// false
+
+console.log(z == z)
+
+// true
+
+
+// toString - "" +  value
+
+console.log("" + 0)
+// 0
+
+console.log("" + -0)
+
+// 0
+
+console.log("" + [])
+
+// empty string return 
+
+console.log("" + {})
+
+// returns object and object  [object Object]
+
+console.log("" + [1, 2])
+
+// it will remove the brackets from the array so it will be [ 1 , 2 ]
+
+console.log("" + [null, undefined])
+// it will remove the brackets from array and also null and undefined
+
+console.log("" + [1, 2, null, 4])
+
+// it will remove the bracket from array and null and result should be 1,2,,4
+
+
+//ToNumber
+
+console.log(0 - "010")  // decimal number 
+
+// -10
+
+console.log(0 - "O10")
+
+// NaN
+
+console.log(0 - 010);
+
+// converted into octal number 010
+
+
+console.log(0 - '0xb') // hexadecimal number 
+
+
+console.log([] - 1)
+
+console.log([""] - 1)
+
+console.log(["0"] - 1)
